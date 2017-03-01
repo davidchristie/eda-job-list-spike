@@ -2,3 +2,7 @@
   list-style: none;
   text-align: center;
 }
+
+.Employer:nth-child(odd) {
+  background-color: lightGray;
+}

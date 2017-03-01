@@ -1,9 +1,10 @@
 .Board {
+  border-style: solid;
+  min-height: 100vh;
   text-align: center;
 }
 
-.Board-header {
-  background-color: #222;
-  color: white;
-  padding: 20px;
+.Board-column {
+  border-style: solid;
+  min-height: 100%;
 }

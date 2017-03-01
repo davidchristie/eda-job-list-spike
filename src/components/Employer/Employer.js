@@ -4,21 +4,27 @@ import './Employer.css'
 
 class Employer extends React.Component {
   render () {
+    const { employer, showDetails } = this.props
     return (
       <li className='Employer'>
-        <h2>Employer</h2>
+        <h2>{employer.name}</h2>
         <button
           onClick={event => {
-            this.props.remove()
+            showDetails()
           }}
-        >Remove</button>
+        >Details</button>
       </li>
     )
   }
 }
 
 Employer.propTypes = {
-  remove: PropTypes.func.isRequired
+  employer: PropTypes.shape({
+    name: PropTypes.string.isRequired
+  }).isRequired,
+  hideDetails: PropTypes.func.isRequired,
+  remove: PropTypes.func.isRequired,
+  showDetails: PropTypes.func.isRequired
 }
 
 export default Employer
